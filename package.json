@@ -8,9 +8,13 @@
   ],
   "license": "ISC",
   "author": "Harshit singh rautela",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-   "start": "node index.js"
+    "start": "node index.js",
+    "dev" : "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
