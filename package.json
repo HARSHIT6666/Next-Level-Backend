@@ -1,0 +1,16 @@
+{
+  "name": "next_level_backend",
+  "version": "1.0.0",
+  "description": "A bakcend with Next_level",
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Harshit singh rautela",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+   "start": "node index.js"
+  }
+}
