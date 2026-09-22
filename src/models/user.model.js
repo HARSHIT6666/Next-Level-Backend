@@ -51,17 +51,17 @@ const userSchema = new mongoose.Schema({
 
     }, {timestamps :true});
 
-
+//this is used to hash the passsword
 
     userSchema.pre("save" , async function(next){
 
-        if(!this.isModified("password")) return next()
+        if(!this.isModified("password")) return next()  // only hash the password if the password is new or  has been changed..
 
         this.password = bcrypt.hash(this.password ,10)
         next()
     })
 
-
+//this is compare the password enter and stored
     userSchema.methods.isPasswordCorrect = async function (password){
        await bcrypt.compare(password , this.password)
     }
@@ -94,4 +94,5 @@ const userSchema = new mongoose.Schema({
         }
     )
     }
+    
 export const  User = mongoose.model('User' , userSchema)

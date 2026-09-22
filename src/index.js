@@ -3,13 +3,11 @@ dns.setServers(['1.1.1.1' ,'8.8.8.8'])
 
 import'dotenv/config'
 import connectDB from "./db/DB.js"
+import app from './app.js'
 
 
 connectDB()
 .then(()=>{
-  app.on((error)=>{
-    console.log('ERROR' , error);
-  })
   app.listen(process.env.port || 8000 , ()=>{
         console.log(`server is running at  port ${process.env.PORT}`)
   })
